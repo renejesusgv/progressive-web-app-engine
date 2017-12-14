@@ -1,0 +1,38 @@
+runtime: php55
+api_version: 1
+threadsafe: yes
+service: test
+handlers:
+- url: /service-worker.js
+  static_files: service-worker.js
+  upload: service-worker.js
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+
+- url: /manifest.json
+  static_files: manifest.json
+  upload: manifest.json
+
+- url: /scripts
+  static_dir: scripts
+
+- url: /styles
+  static_dir: styles
+
+- url: /resources
+  static_dir: resources
+
+- url: /images
+  static_dir: images
+
+- url: /.*
+  static_files: index.html
+  upload: index.html
+
+skip_files:
+ - ^node_modules$
+  ^(.*/)?.*/node_modules/.*$
+
+default_expiration: "1s"

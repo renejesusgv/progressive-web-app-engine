@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "wheather-US": "wheather-us",
+    "default": "wheather-us"
+  }
+}
